@@ -1,5 +1,8 @@
 export class QuotesClass {
-    id:number;
-    quoteWritten:string;
-    writterName:string;
+    constructor(public id:number,public quotesWritten:string,public authorName:string,public writtenDate:Date){
+
+    }
+    // id:number;
+    // quotesWritten:string;
+    // WriterName:string;
 }

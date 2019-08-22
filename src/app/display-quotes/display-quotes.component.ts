@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { QuotesClass } from '../quotes-class';
 
 @Component({
   selector: 'app-display-quotes',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./display-quotes.component.css']
 })
 export class DisplayQuotesComponent implements OnInit {
-
+  
+  quotes:QuotesClass []=[
+    new QuotesClass(1,'Write your quote','author name',new Date(2019,1,1))
+  ];
   constructor() { }
 
   ngOnInit() {
-  }
+  };
 
-}
+     
+  };
+
+

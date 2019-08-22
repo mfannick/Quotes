@@ -1,1 +1,17 @@
-<p>display-quotes works!</p>
+<!-- <p>display-quotes works!</p> -->
+<h1 class="text-center">QUOTES</h1>
+<hr>
+<div class="row">
+    <div class="col">
+        <h2 class="text-center">Added quotes</h2>
+        <hr>
+        <div *ngFor='let quote of quotes'>
+            <p class="text-center">{{quote.quotesWritten}}</p>
+            <app-quotes-details [quote]='quote'></app-quotes-details>
+        </div>
+    </div>
+    <div class="col">
+        <app-display-quotes-form></app-display-quotes-form>
+    </div>
+
+</div>
