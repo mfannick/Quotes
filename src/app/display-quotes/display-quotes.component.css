@@ -3,6 +3,9 @@
     background-repeat:no-repeat;
     background-size:cover;
 }
+.all1,.all2{
+    background-color: rgba(0, 0, 0, 0.3)
+}
 h2,p{
     color:white;
 }

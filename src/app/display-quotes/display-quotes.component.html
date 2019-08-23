@@ -2,7 +2,7 @@
 <h1 class="text-center">QUOTES</h1>
 <hr>
 <div class="row all">
-    <div class="col">
+    <div class="col all1">
         <h2 class="text-center">Added quotes</h2>
         <hr>
         <div *ngFor='let quote of quotes let i=index'>
@@ -12,7 +12,7 @@
             </app-quotes-details>
         </div>
     </div>
-    <div class="col">
+    <div class="col all2">
         <app-display-quotes-form (newQuotesAdded)='quotesAdded($event)'></app-display-quotes-form>
     </div>
 
