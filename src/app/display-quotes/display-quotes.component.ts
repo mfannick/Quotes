@@ -14,6 +14,17 @@ export class DisplayQuotesComponent implements OnInit {
   toggleDetails(index){
      this.quotes[index].showDetails=!this.quotes[index].showDetails
   }
+  deleteQuote(quotesDeleted,index){
+   if(quotesDeleted){
+      this.quotes.splice(index,1)
+   }
+  }
+  quotesAdded(quote){
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength+1;
+    quote.writtenDate = new Date(quote.writtenDate)
+    this.quotes.push(quote)
+  }
   constructor() { }
 
   ngOnInit() {

@@ -1,5 +1,6 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input, Output,EventEmitter } from '@angular/core';
 import { QuotesClass } from '../quotes-class';
+
 
 @Component({
   selector: 'app-quotes-details',
@@ -7,11 +8,19 @@ import { QuotesClass } from '../quotes-class';
   styleUrls: ['./quotes-details.component.css']
 })
 export class QuotesDetailsComponent implements OnInit {
+  
   @Input() quote:QuotesClass;
+  @Output() quotesDeleted=new EventEmitter<boolean>()
 
-  constructor() { }
+  deleteQuoteDetail(deletequote:boolean){
 
-  ngOnInit() {
+      this.quotesDeleted.emit(deletequote)
   }
+  
+ constructor(){}
 
+ ngOnInit() {
 }
+
+
+};
