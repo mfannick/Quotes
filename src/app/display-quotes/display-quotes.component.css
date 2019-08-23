@@ -1,11 +1,14 @@
-.all{
+/* .all{
     background-image:url('https://images.wallpaperscraft.com/image/beige_blur_light_95712_300x168.jpg');
     background-repeat:no-repeat;
     background-size:cover;
 }
-.all1,.all2{
+.all1{
     background-color: rgba(0, 0, 0, 0.3)
 }
 h2,p{
     color:white;
+} */
+.btn{
+    background-color: rgba(228, 120, 51, 1)
 }

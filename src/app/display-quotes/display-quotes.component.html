@@ -1,19 +1,22 @@
 <!-- <p>display-quotes works!</p> -->
-<h1 class="text-center">QUOTES</h1>
-<hr>
-<div class="row all">
-    <div class="col all1">
-        <h2 class="text-center">Added quotes</h2>
-        <hr>
-        <div *ngFor='let quote of quotes let i=index'>
-            <p class="text-center">{{quote.quotesWritten}}</p>
-            <button class="text-center btn btn-secondary" (click)='toggleDetails(i)'>Quotes details</button>
-            <app-quotes-details [quote]='quote' *ngIf='quote.showDetails' (quotesDeleted)='deleteQuote($event,i)'>
-            </app-quotes-details>
+<div class="display">
+    <img src="https://images.wallpaperscraft.com/image/proverb_wisdom_thought_144237_1280x720.jpg" alt="quote">
+    <h1 class="text-center">QUOTES</h1>
+    <hr>
+    <div class="row">
+        <div class="col all1">
+            <h2 class="text-center">Added quotes</h2>
+            <hr>
+            <div *ngFor='let quote of quotes let i=index'>
+                <p class="text-center">{{quote.quotesWritten}}</p>
+                <button class="text-center btn btn-secondary" (click)='toggleDetails(i)'>Quotes details</button>
+                <app-quotes-details [quote]='quote' *ngIf='quote.showDetails' (quotesDeleted)='deleteQuote($event,i)'>
+                </app-quotes-details>
+            </div>
         </div>
-    </div>
-    <div class="col all2">
-        <app-display-quotes-form (newQuotesAdded)='quotesAdded($event)'></app-display-quotes-form>
-    </div>
+        <div class="col all2">
+            <app-display-quotes-form (newQuotesAdded)='quotesAdded($event)'></app-display-quotes-form>
+        </div>
 
+    </div>
 </div>

@@ -3,6 +3,9 @@
     background-repeat:no-repeat;
     background-size:cover;
 } */
-label,h2{
+/* label,h2{
     color:white;
+} */
+#add{
+    background-color: rgba(228, 120, 51, 1)
 }
