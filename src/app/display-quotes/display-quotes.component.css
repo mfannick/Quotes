@@ -12,3 +12,12 @@ h2,p{
 .btn{
     background-color: rgba(228, 120, 51, 1)
 }
+.special-color-dark{
+    background-color: rgba(34, 49, 63, 1);
+}
+.py-3{
+    background-color: rgba(36, 37, 42, 1);
+}
+.cp{
+    color: white;
+}
