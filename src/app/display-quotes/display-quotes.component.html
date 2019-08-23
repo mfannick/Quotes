@@ -5,9 +5,10 @@
     <div class="col">
         <h2 class="text-center">Added quotes</h2>
         <hr>
-        <div *ngFor='let quote of quotes'>
+        <div *ngFor='let quote of quotes let i=index'>
             <p class="text-center">{{quote.quotesWritten}}</p>
-            <app-quotes-details [quote]='quote'></app-quotes-details>
+            <button (click)='toggleDetails(i)'>Quotes details</button>
+            <app-quotes-details [quote]='quote' *ngIf='quote.showDetails'></app-quotes-details>
         </div>
     </div>
     <div class="col">

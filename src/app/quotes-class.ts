@@ -1,6 +1,7 @@
 export class QuotesClass {
-    constructor(public id:number,public quotesWritten:string,public authorName:string,public writtenDate:Date){
-
+    showDetails:boolean
+    constructor(public id:number,public quotesWritten:string,public authorName:string,public submitPerson:string,public writtenDate:Date){
+        this.showDetails=false;
     }
     // id:number;
     // quotesWritten:string;
