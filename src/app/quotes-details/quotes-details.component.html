@@ -3,11 +3,11 @@
 <p class="text-center">Writer name:{{quote.submitPerson}}</p>
 <p class="text-center">Date:{{quote.writtenDate|date}}</p>
 <div>
-    <button class="text-center btn btn-secondary" style="margin:5px" (click)='liked()'> <img
+    <button class="text-center btn btn-secondary"  style="margin-left:250px"(click)='liked()'> <img
             src="https://img.icons8.com/material-sharp/24/000000/filled-like.png"
             alt="like">{{like}}</button>
-    <button class="text-center btn btn-secondary" (click)='disliked()'><img
+    <button class="text-center btn btn-secondary" style="margin-left:5px" (click)='disliked()'><img
             src="https://img.icons8.com/material-sharp/24/000000/dislike.png"
             alt="unlike">{{dislike}}</button><br><br>
 </div>
-<button class="text-center btn btn-secondary"(click)='deleteQuoteDetail(true)'> <img src="https://img.icons8.com/material-rounded/24/000000/delete.png" alt="delete"></button>
+<button class="text-center btn btn-secondary" style="margin-left:280px" (click)='deleteQuoteDetail(true)'> <img src="https://img.icons8.com/material-rounded/24/000000/delete.png" alt="delete"></button>

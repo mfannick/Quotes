@@ -1,5 +1,20 @@
 <!-- <p>display-quotes works!</p> -->
 <div class="display">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <img src="https://images.wallpaperscraft.com/image/proverb_wisdom_thought_144237_1280x720.jpg" alt="quote">
     <h1 class="text-center">QUOTES</h1>
     <hr>
@@ -9,7 +24,7 @@
             <hr>
             <div *ngFor='let quote of quotes let i=index'>
                 <p class="text-center">{{quote.quotesWritten}}</p>
-                <button class="text-center btn btn-secondary" (click)='toggleDetails(i)'>Quotes details</button>
+                <button class="text-center btn btn-secondary" style="margin-left:250px" (click)='toggleDetails(i)'>Quotes details</button>
                 <app-quotes-details [quote]='quote' *ngIf='quote.showDetails' (quotesDeleted)='deleteQuote($event,i)'>
                 </app-quotes-details>
             </div>
