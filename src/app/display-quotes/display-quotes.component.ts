@@ -7,30 +7,35 @@ import { QuotesClass } from '../quotes-class';
   styleUrls: ['./display-quotes.component.css']
 })
 export class DisplayQuotesComponent implements OnInit {
-  
-  quotes:QuotesClass []=[
-    new QuotesClass(1,'Write your quote','author name','The person who submitted the quote',new Date(2019,1,1))
+
+  quotes: QuotesClass[] = [
+    new QuotesClass(1, 'Write your quote', 'author name', 'The person who submitted the quote', new Date(2019, 1, 1))
   ];
-  toggleDetails(index){
-     this.quotes[index].showDetails=!this.quotes[index].showDetails
+  toggleDetails(index) {
+    this.quotes[index].showDetails = !this.quotes[index].showDetails
   }
-  deleteQuote(quotesDeleted,index){
-   if(quotesDeleted){
-      this.quotes.splice(index,1)
-   }
+  deleteQuote(quotesDeleted, index) {
+    if (quotesDeleted) {
+      let deleted = confirm('Are you sure you want to delete')
+      if (deleted) {
+        this.quotes.splice(index, 1)
+      }
+
+    }
   }
-  quotesAdded(quote){
+  quotesAdded(quote) {
     let quoteLength = this.quotes.length;
-    quote.id = quoteLength+1;
+    quote.id = quoteLength + 1;
     quote.writtenDate = new Date(quote.writtenDate)
     this.quotes.push(quote)
   }
+
   constructor() { }
 
   ngOnInit() {
   };
 
-     
-  };
+
+};
 
 

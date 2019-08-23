@@ -16,6 +16,14 @@ export class QuotesDetailsComponent implements OnInit {
 
       this.quotesDeleted.emit(deletequote)
   }
+  like=0;
+  dislike=0;
+  liked(){
+    this.like=this.like+1
+  }
+  disliked(){
+    this.dislike=this.dislike-1
+  }
   
  constructor(){}
 

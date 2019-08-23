@@ -1,5 +1,13 @@
 <!-- <p>quotes-details works!</p> -->
-<p class="text-center">{{quote.authorName}}</p>
-<p class="text-center">{{quote.submitPerson}}</p>
-<p class="text-center">{{quote.writtenDate|date}}</p>
-<button class="text-center btn btn-secondary"(click)='deleteQuoteDetail(true)'> Delete Quotes details</button>
+<p class="text-center">Author name:{{quote.authorName}}</p>
+<p class="text-center">Writer name:{{quote.submitPerson}}</p>
+<p class="text-center">Date:{{quote.writtenDate|date}}</p>
+<div>
+    <button class="text-center btn btn-secondary" style="margin:5px" (click)='liked()'> <img
+            src="https://img.icons8.com/material-sharp/24/000000/filled-like.png"
+            alt="like">{{like}}</button>
+    <button class="text-center btn btn-secondary" (click)='disliked()'><img
+            src="https://img.icons8.com/material-sharp/24/000000/dislike.png"
+            alt="unlike">{{dislike}}</button><br><br>
+</div>
+<button class="text-center btn btn-secondary"(click)='deleteQuoteDetail(true)'> <img src="https://img.icons8.com/material-rounded/24/000000/delete.png" alt="delete"></button>
