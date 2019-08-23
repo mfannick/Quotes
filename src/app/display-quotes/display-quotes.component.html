@@ -7,6 +7,8 @@
         <hr>
         <div *ngFor='let quote of quotes let i=index'>
             <p class="text-center">{{quote.quotesWritten}}</p>
+            <button class="text-center btn btn-secondary"> <img src="https://img.icons8.com/material-sharp/24/000000/filled-like.png" alt="like"></button>
+            <button class="text-center btn btn-secondary"><img src="https://img.icons8.com/material-sharp/24/000000/dislike.png" alt="unlike"></button><br><br>
             <button class="text-center btn btn-secondary" (click)='toggleDetails(i)'>Quotes details</button>
             <app-quotes-details [quote]='quote' *ngIf='quote.showDetails' (quotesDeleted)='deleteQuote($event,i)'></app-quotes-details>
         </div>
