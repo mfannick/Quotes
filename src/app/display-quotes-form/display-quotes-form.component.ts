@@ -10,6 +10,7 @@ export class DisplayQuotesFormComponent implements OnInit {
     @Output()newQuotesAdded=new EventEmitter<QuotesClass>()
     addToQuote(){
       this.newQuotesAdded.emit(this.newQuote)
+      this.newQuote=new QuotesClass(0,'','','',new Date());
     }
   constructor() { }
 
