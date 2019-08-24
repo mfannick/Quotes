@@ -9,7 +9,7 @@ import { QuotesClass } from '../quotes-class';
 export class DisplayQuotesComponent implements OnInit {
 
   quotes: QuotesClass[] = [
-    new QuotesClass(1, 'Write your quote', 'author name', 'The person who submitted the quote', new Date(2019, 1, 1))
+    new QuotesClass(1, 'When asked ,"What is more important:Praying or reading the Bible?" I ask "What is more important:Breathing in or out?"', 'Charles Spergeon', 'Annick', new Date(2019, 1, 1))
   ];
   toggleDetails(index) {
     this.quotes[index].showDetails = !this.quotes[index].showDetails
