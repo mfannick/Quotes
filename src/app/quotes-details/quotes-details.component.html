@@ -2,12 +2,19 @@
 <p class="text-center">Author name:{{quote.authorName}}</p>
 <p class="text-center">Writer name:{{quote.submitPerson}}</p>
 <p class="text-center">Date:{{quote.writtenDate|countingDate}}</p>
-<div>
-    <button class="text-center btn btn-secondary"  style="margin-left:250px"(click)='liked()'> <img
-            src="https://img.icons8.com/material-sharp/24/000000/filled-like.png"
-            alt="like">{{like}}</button>
-    <button class="text-center btn btn-secondary" style="margin-left:5px" (click)='disliked()'><img
-            src="https://img.icons8.com/material-sharp/24/000000/dislike.png"
-            alt="unlike">{{dislike}}</button><br><br>
+<div class="row">
+        <div class="col">
+                <button class="text-center btn btn-secondary" style="margin-left:30px" (click)='liked()'><img
+                                src="https://img.icons8.com/material-sharp/24/000000/filled-like.png"
+                                alt="like">{{like}}</button>
+                <button class="text-center btn btn-secondary" style="margin-left:30px" (click)='disliked()'><img
+                                src="https://img.icons8.com/material-sharp/24/000000/dislike.png"
+                                alt="unlike">{{dislike}}</button>
+        </div>
+        <div class="col">
+                <button class="text-center btn btn-secondary" style="margin-left:30px"
+                        (click)='deleteQuoteDetail(true)'> <img
+                                src="https://img.icons8.com/material-rounded/24/000000/delete.png"
+                                alt="delete"></button>
+        </div>
 </div>
-<button class="text-center btn btn-secondary" style="margin-left:280px" (click)='deleteQuoteDetail(true)'> <img src="https://img.icons8.com/material-rounded/24/000000/delete.png" alt="delete"></button>

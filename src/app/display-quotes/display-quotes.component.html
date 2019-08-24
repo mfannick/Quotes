@@ -18,14 +18,14 @@
     <img src="https://images.wallpaperscraft.com/image/proverb_wisdom_thought_144237_1280x720.jpg" alt="quote">
     <h1 class="text-center">QUOTES</h1>
     <hr>
-    <div class="row">
+    <div class="row text-center">
         
-        <div class="col-5 all1">
+        <div class="col-md-4 jumbotron" style="margin-left:200px">
             <h2 class="text-center">Added quotes</h2>
             <hr>
             <div *ngFor='let quote of quotes let i=index'>
                 <p class="text-center">{{quote.quotesWritten}}</p>
-                <button class="text-center btn btn-secondary" style="margin-left:250px"
+                <button class="text-center btn btn-secondary" style="margin-left:30px"
                     (click)='toggleDetails(i)'>Quotes details</button>
                 <app-quotes-details [quote]='quote' *ngIf='quote.showDetails' (quotesDeleted)='deleteQuote($event,i)'>
                 </app-quotes-details>
@@ -43,7 +43,7 @@
             </div> -->
         </div>
      
-        <div class="col-6 all2">
+        <div class="col-md-4 jumbotron" style="margin-left:10px">
             <app-display-quotes-form (newQuotesAdded)='quotesAdded($event)'></app-display-quotes-form>
         </div>
 
