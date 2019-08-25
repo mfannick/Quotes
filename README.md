@@ -3,8 +3,8 @@
 This project is an application where users create quotes and have those quotes voted on whether they are terrible or are inspirational.
 
  ## Author's Name
- Annick Francine MAJYAMBERE 
- A new web-developer
+    -Annick Francine MAJYAMBERE 
+    -A new web-developer
   ## Setup instructions
   
     -Visit the website using the github online link
