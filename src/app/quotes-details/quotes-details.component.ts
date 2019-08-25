@@ -16,29 +16,15 @@ export class QuotesDetailsComponent implements OnInit {
 
       this.quotesDeleted.emit(deletequote)
   }
-  count=0;
-  // line(){
-  //   let first=0;
-  //   let last=0;
-    
-  //   for(this.count=0,this.count<=this.quotes.length,this.count++){
-  //         if(last>0){
-  //              first=last
-  //         }
-  //   }
-  // }
+  count=0
+  
+ 
   like=0
   dislike=0
   
   liked(){
     
-    var like=this.like
     this.like=this.like+1
-    
-    if(like>2){
-      alert('yes')
-         }
-
   }
   disliked(){
     this.dislike=this.dislike+1

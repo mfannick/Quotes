@@ -4,13 +4,13 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="display-quotes.component.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
+          <a class="nav-link" href="#footer">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
+          <a class="nav-link" href="#footer">Contact Us</a>
         </li>
       </ul>
     </div>
@@ -25,7 +25,10 @@
       <hr>
       <div *ngFor='let quote of quotes let i=index'>
         <ul>
-          <li   appUnderline class="text-center">{{quote.quotesWritten}}</li>
+            
+          <!-- <li *ngIf='(line()=quote.like) && [quote.like=0)' appUnderline class="text-center">{{quote.quotesWritten}}</li> -->
+          <li class="text-center" appUnderline>{{quote.quotesWritten}}</li>
+          <!-- <li *ngIf='((line()!=quote.like) && (quote.like=0))' class="text-center">{{quote.quotesWritten}}</li> -->
         </ul>
 
         <button class="text-center btn btn-secondary" style="margin-left:30px" (click)='toggleDetails(i)'>Quotes
@@ -42,7 +45,7 @@
   </div>
 </div>
 <!-- Footer -->
-<footer class="page-footer font-small special-color-dark pt-4" style="margin-top:10px">
+<footer class="page-footer font-small special-color-dark pt-4" id="footer" style="margin-top:10px">
 
   <!-- Footer Elements -->
   <div class="container">

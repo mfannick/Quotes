@@ -12,7 +12,21 @@ export class DisplayQuotesComponent implements OnInit {
     new QuotesClass(1, 'When asked ,"What is more important:Praying or reading the Bible?" I ask "What is more important:Breathing in or out?"', 'Charles Spergeon', 'Annick', new Date(2019, 1, 1),0,0)
   
   ];
-
+  
+//   count=0
+//  line(){
+  
+//     let first=0;
+//     let last=0;
+    
+//     for(this.count=0;this.count<=this.quotes.length;this.count++){
+//           if(first>0){
+//                first=last
+//           }
+//           return first
+//     }
+    
+//   }
   
   toggleDetails(index) {
     this.quotes[index].showDetails = !this.quotes[index].showDetails
