@@ -13,20 +13,7 @@ export class DisplayQuotesComponent implements OnInit {
   
   ];
   
-//   count=0
-//  line(){
-  
-//     let first=0;
-//     let last=0;
-    
-//     for(this.count=0;this.count<=this.quotes.length;this.count++){
-//           if(first>0){
-//                first=last
-//           }
-//           return first
-//     }
-    
-//   }
+
   
   toggleDetails(index) {
     this.quotes[index].showDetails = !this.quotes[index].showDetails
