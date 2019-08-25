@@ -9,8 +9,11 @@ import { QuotesClass } from '../quotes-class';
 export class DisplayQuotesComponent implements OnInit {
 
   quotes: QuotesClass[] = [
-    new QuotesClass(1, 'When asked ,"What is more important:Praying or reading the Bible?" I ask "What is more important:Breathing in or out?"', 'Charles Spergeon', 'Annick', new Date(2019, 1, 1))
+    new QuotesClass(1, 'When asked ,"What is more important:Praying or reading the Bible?" I ask "What is more important:Breathing in or out?"', 'Charles Spergeon', 'Annick', new Date(2019, 1, 1),0,0)
+  
   ];
+
+  
   toggleDetails(index) {
     this.quotes[index].showDetails = !this.quotes[index].showDetails
   }
@@ -23,6 +26,7 @@ export class DisplayQuotesComponent implements OnInit {
 
     }
   }
+ 
   quotesAdded(quote) {
     let quoteLength = this.quotes.length;
     quote.id = quoteLength + 1;

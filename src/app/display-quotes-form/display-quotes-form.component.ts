@@ -6,11 +6,11 @@ import{ QuotesClass} from '../quotes-class'
   styleUrls: ['./display-quotes-form.component.css']
 })
 export class DisplayQuotesFormComponent implements OnInit {
-    newQuote= new QuotesClass(0,'','','',new Date())
+    newQuote= new QuotesClass(0,'','','',new Date(),0,0)
     @Output()newQuotesAdded=new EventEmitter<QuotesClass>()
     addToQuote(){
       this.newQuotesAdded.emit(this.newQuote)
-      this.newQuote=new QuotesClass(0,'','','',new Date());
+      this.newQuote=new QuotesClass(0,'','','',new Date(),0,0);
     }
   constructor() { }
 

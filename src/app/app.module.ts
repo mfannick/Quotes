@@ -7,6 +7,7 @@ import { DisplayQuotesComponent } from './display-quotes/display-quotes.componen
 import { QuotesDetailsComponent } from './quotes-details/quotes-details.component';
 import { DisplayQuotesFormComponent } from './display-quotes-form/display-quotes-form.component';
 import { CountingDatePipe } from './counting-date.pipe';
+import { UnderlineDirective } from './underline.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CountingDatePipe } from './counting-date.pipe';
     DisplayQuotesComponent,
     QuotesDetailsComponent,
     DisplayQuotesFormComponent,
-    CountingDatePipe
+    CountingDatePipe,
+    UnderlineDirective
   ],
   imports: [
     BrowserModule,

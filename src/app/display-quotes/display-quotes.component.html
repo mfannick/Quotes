@@ -1,87 +1,82 @@
 <!-- <p>display-quotes works!</p> -->
 <div class="display">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <img src="https://images.wallpaperscraft.com/image/proverb_wisdom_thought_144237_1280x720.jpg" alt="quote">
-    <h1 class="text-center">QUOTES</h1>
-    <hr>
-    <div class="row text-center">
-        
-        <div class="col-md-4 jumbotron" style="margin-left:200px">
-            <h2 class="text-center">Added quotes</h2>
-            <hr>
-            <div *ngFor='let quote of quotes let i=index'>
-                <p class="text-center">{{quote.quotesWritten}}</p>
-                <button class="text-center btn btn-secondary" style="margin-left:30px"
-                    (click)='toggleDetails(i)'>Quotes details</button>
-                <app-quotes-details [quote]='quote' *ngIf='quote.showDetails' (quotesDeleted)='deleteQuote($event,i)'>
-                </app-quotes-details>
-            </div>
-            <!-- <div *ngFor='let quote of quotes let i=index' class="card text-center" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title ">{{quote.quotesWritten}}</h5>
-                <h6 class="card-subtitle mb-2 text-muted"><button class="text-center btn btn-secondary" style="margin-left:250px"
-                  (click)='toggleDetails(i)'>Quotes details</button></h6>
-                <p class="card-text"><app-quotes-details [quote]='quote' *ngIf='quote.showDetails' (quotesDeleted)='deleteQuote($event,i)'>
-                </app-quotes-details></p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-              </div>
-            </div> -->
-        </div>
-     
-        <div class="col-md-4 jumbotron" style="margin-left:10px">
-            <app-display-quotes-form (newQuotesAdded)='quotesAdded($event)'></app-display-quotes-form>
-        </div>
-
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+      </ul>
     </div>
+  </nav>
+  <img src="https://images.wallpaperscraft.com/image/proverb_wisdom_thought_144237_1280x720.jpg" alt="quote">
+  <h1 class="text-center">QUOTES</h1>
+  <hr>
+  <div class="row text-center">
+
+    <div class="col-md-4 jumbotron" style="margin-left:200px">
+      <h2 class="text-center">Added quotes</h2>
+      <hr>
+      <div *ngFor='let quote of quotes let i=index'>
+        <ul>
+          <li   appUnderline class="text-center">{{quote.quotesWritten}}</li>
+        </ul>
+
+        <button class="text-center btn btn-secondary" style="margin-left:30px" (click)='toggleDetails(i)'>Quotes
+          details</button>
+        <app-quotes-details [quote]='quote' *ngIf='quote.showDetails' (quotesDeleted)='deleteQuote($event,i)'>
+        </app-quotes-details>
+      </div>
+    </div>
+
+    <div class="col-md-4 jumbotron" style="margin-left:10px">
+      <app-display-quotes-form (newQuotesAdded)='quotesAdded($event)'></app-display-quotes-form>
+    </div>
+
+  </div>
 </div>
 <!-- Footer -->
 <footer class="page-footer font-small special-color-dark pt-4" style="margin-top:10px">
 
-        <!-- Footer Elements -->
-        <div class="container">
-      
-          <!-- Social buttons -->
-          <ul class="list-unstyled list-inline text-center">
-            <li class="list-inline-item">
-              <a class="btn-floating btn-fb mx-1">
-                <i class="fab fa-facebook-f"><img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="instagram"> </i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a class="btn-floating btn-tw mx-1">
-                <i class="fab fa-twitter"><img src="https://img.icons8.com/color/50/000000/twitter-circled.png" alt="twitter"> </i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a class="btn-floating btn-dribbble mx-1">
-                <i class="fab fa-dribbble"><img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="facebook"></i>
-              </a>
-            </li>
-          </ul>
-          <!-- Social buttons -->
-      
-        </div>
-        <!-- Footer Elements -->
-      
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3"><span class="cp">© 2019 Copyright reserved Annick F M</span> 
-        </div>
-        <!-- Copyright -->
-      
-      </footer>
-      <!-- Footer -->
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!-- Social buttons -->
+    <ul class="list-unstyled list-inline text-center">
+      <li class="list-inline-item">
+        <a class="btn-floating btn-fb mx-1">
+          <i class="fab fa-facebook-f"><img src="https://img.icons8.com/color/48/000000/instagram-new.png"
+              alt="instagram"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-tw mx-1">
+          <i class="fab fa-twitter"><img src="https://img.icons8.com/color/50/000000/twitter-circled.png" alt="twitter">
+          </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-dribbble mx-1">
+          <i class="fab fa-dribbble"><img src="https://img.icons8.com/color/48/000000/facebook-new.png"
+              alt="facebook"></i>
+        </a>
+      </li>
+    </ul>
+    <!-- Social buttons -->
+
+  </div>
+  <!-- Footer Elements -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3"><span class="cp">© 2019 Copyright reserved Annick F M</span>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
